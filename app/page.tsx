@@ -1,101 +1,152 @@
-import Image from "next/image";
+'use client';
+
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    return (
+        <main>
+            <div className="container mx-auto mt-6 px-6 lg:px-0">
+                <div className="relative rounded-xl overflow-hidden bg-[#2D2D2D]" style={{ height: '650px' }}>
+                    <div
+                        className="absolute inset-0 bg-[url('/image_01.jpg')] bg-cover bg-center opacity-50"
+                        style={{
+                            transform: 'scale(1.1)',
+                        }}
+                    ></div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+                    <div className="relative h-full flex flex-col justify-center px-8 lg:px-16">
+                        <h1 className="text-6xl md:text-8xl font-bold text-white mb-6">
+                            Something
+                            <br />
+                            need fixing?
+                        </h1>
+                        <p className="text-xl md:text-xl text-white max-w-2xl mt-4">
+                            From getting potholes filled to encouraging better parking, report issues affecting your
+                            part of the world to local councils, utilities and more.
+                        </p>
+
+                        <div className="space-y-4 mt-12">
+                            <p className="text-white text-lg font-medium">GET THE APP AND START SNAPPING</p>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <a href="#" className="inline-block">
+                                    <img src="/Appstore.svg" alt="Download on the App Store" className="h-16 w-auto" />
+                                </a>
+                                <a href="#" className="inline-block">
+                                    <img src="/googleplay.svg" alt="Get it on Google Play" className="h-16 w-auto" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="container mx-auto text-center py-24 px-6 lg:px-0">
+                <h2 className="text-4xl md:text-6xl font-bold text-black">Do your bit, on the go.</h2>
+                <h2 className="text-xl md:text-xl text-black mt-8">
+                    Anywhere in Australia or Aotearoa New Zealand, anytime.
+                </h2>
+                <button className="bg-[#D1FF7E] text-black lg:px-6 px-10 py-2 mt-8 rounded-xl border-2 border-black text-xl font-medium hover:bg-[#bfed6e] transition-colors">
+                    Start Snapping
+                </button>
+            </div>
+
+            <section className="bg-[#f4f2ef] py-16 px-4 md:py-24">
+                <div className="container mx-auto max-w-6xl">
+                    <div className="text-center mb-8">
+                        <span className="inline-block bg-[#D1FF7E] text-black px-4 py-1 rounded-full text-md font-medium uppercase tracking-wide">
+                            HOW IT WORKS
+                        </span>
+                    </div>
+
+                    <h2 className="text-4xl md:text-6xl font-bold text-center mb-12 md:mb-16 text-[#2c2927]">
+                        How Snap Send Solve Works
+                    </h2>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 ">
+                        <div className="bg-white rounded-xl overflow-hidden">
+                            <div className="relative">
+                                <Image src="/image_04.jpg" alt="Snap process illustration" width={450} height={350} />
+                            </div>
+                            <div className="p-6 text-center">
+                                <h3 className="text-4xl font-bold mb-3 text-[#2c2927]">Snap</h3>
+                                <p className="text-[#2c2927] text-lg">Spotted an issue? Snap to help get it fixed!</p>
+                            </div>
+                        </div>
+
+                        <div className="bg-white rounded-xl  overflow-hidden">
+                            <div className="relative">
+                                <Image src="/image_04.jpg" alt="Snap process illustration" width={450} height={350} />
+                            </div>
+                            <div className="p-6 text-center">
+                                <h3 className="text-4xl text-[#2c2927] font-bold mb-3">Send</h3>
+                                <p className="text-[#2c2927] text-lg">
+                                    Send a report on the spot. No clunky forms or hold times.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="bg-white rounded-xl overflow-hidden">
+                            <div className="relative">
+                                <Image src="/image_04.jpg" alt="Snap process illustration" width={450} height={350} />
+                            </div>
+                            <div className="p-6 text-center">
+                                <h3 className="text-4xl text-[#2c2927] font-bold mb-3">Solve</h3>
+                                <p className="text-[#2c2927] text-lg">
+                                    We'll get it to the right place so it can get Solved!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="text-center mt-12">
+                        <Link
+                            href="/send-snap"
+                            className="inline-block bg-[#2c2927] text-white px-8 py-3 text-xl rounded-lg font-medium hover:bg-gray-800 transition-colors"
+                        >
+                            Send a Snap
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            <div className="container mx-auto max-w-7xl px-4 py-16 text-[#2c2927]">
+                {/* Main Heading */}
+                <h2 className="text-4xl font-bold text-center max-w-4xl mx-auto mb-20">
+                    The trusted reporting tool for Australian and New Zealand organisations
+                </h2>
+
+                {/* Logo Grid */}
+                <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 mb-16">
+                    <Image src="/1.avif" alt="City of Monash logo" width={100} height={60} className="object-contain" />
+                    <Image src="/1.avif" alt="Knox logo" width={120} height={60} className="object-contain" />
+                    <Image src="/1.avif" alt="Townsville logo" width={110} height={60} className="object-contain" />
+                    <Image src="/1.avif" alt="Orion logo" width={110} height={60} className="object-contain" />
+                    <Image
+                        src="/1.avif"
+                        alt="Yarra Valley Water logo"
+                        width={120}
+                        height={60}
+                        className="object-contain"
+                    />
+                    <Image src="/1.avif" alt="Telstra logo" width={120} height={60} className="object-contain" />
+                    <Image src="/1.avif" alt="Sydney Water logo" width={120} height={60} className="object-contain" />
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex flex-col md:flex-row justify-center gap-4 mt-12">
+                    <Link href="/solvers">
+                        <button className="w-full md:w-auto bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors text-xl ">
+                            View All Solvers
+                        </button>
+                    </Link>
+                    <Link href="/how-solvers-use">
+                        <button className="w-full md:w-auto bg-white text-black px-8 py-3 rounded-lg font-medium text-xl border-2 border-black hover:bg-gray-50 transition-colors">
+                            How Solvers Use Snap Send Solve
+                        </button>
+                    </Link>
+                </div>
+            </div>
+        </main>
+    );
 }
